@@ -9,7 +9,7 @@ let app = express();
 /*const absolutePath = __dirname + '/views/index.html';
 const public       = __dirname + '/public';*/
 
-app.use((req,res,next) =>{
+app.use(function(req,res,next){
     console.log(req.method + ' ' + req.path + ' ' + req.ip)
     next();
 });
